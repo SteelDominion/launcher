@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LAUNCHER_APPID="org.prismlauncher.PrismLauncher"
+LAUNCHER_APPID="net.steeldominion.SteelLauncher"
 
 svg2png() {
     input_file="$1"

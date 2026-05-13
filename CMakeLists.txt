@@ -191,32 +191,32 @@ set(Launcher_VERSION_NAME4_COMMA "${Launcher_VERSION_MAJOR},${Launcher_VERSION_M
 set(Launcher_BUILD_PLATFORM "unknown" CACHE STRING "A short string identifying the platform that this build was built for. Only used to display in the about dialog.")
 
 # Github repo URL with releases for updater
-set(Launcher_UPDATER_GITHUB_REPO "https://github.com/PrismLauncher/PrismLauncher" CACHE STRING "Base github URL for the updater.")
+set(Launcher_UPDATER_GITHUB_REPO "https://github.com/SteelDominion/launcher" CACHE STRING "Base github URL for the updater.")
 
 # Name to help updater identify valid artifacts
 set(Launcher_BUILD_ARTIFACT "" CACHE STRING "Artifact name to help the updater identify valid artifacts.")
 
 # The metadata server
-set(Launcher_META_URL "https://meta.prismlauncher.org/v1/" CACHE STRING "URL to fetch Launcher's meta files from.")
+set(Launcher_META_URL "" CACHE STRING "URL to fetch Launcher's meta files from.")
 
 # Imgur API Client ID
-set(Launcher_IMGUR_CLIENT_ID "5b97b0713fba4a3" CACHE STRING "Client ID you can get from Imgur when you register an application")
+set(Launcher_IMGUR_CLIENT_ID "" CACHE STRING "Client ID you can get from Imgur when you register an application")
 
 # Bug tracker URL
-set(Launcher_BUG_TRACKER_URL "https://github.com/PrismLauncher/PrismLauncher/issues" CACHE STRING "URL for the bug tracker.")
+set(Launcher_BUG_TRACKER_URL "" CACHE STRING "URL for the bug tracker.")
 
 # Translations Platform URL
-set(Launcher_TRANSLATIONS_URL "https://hosted.weblate.org/projects/prismlauncher/launcher/" CACHE STRING "URL for the translations platform.")
-set(Launcher_TRANSLATION_FILES_URL "https://i18n.prismlauncher.org/" CACHE STRING "URL for the translations files.")
+set(Launcher_TRANSLATIONS_URL "" CACHE STRING "URL for the translations platform.")
+set(Launcher_TRANSLATION_FILES_URL "" CACHE STRING "URL for the translations files.")
 
 # Matrix Space
-set(Launcher_MATRIX_URL "https://prismlauncher.org/matrix" CACHE STRING "URL to the Matrix Space")
+set(Launcher_MATRIX_URL "" CACHE STRING "URL to the Matrix Space")
 
 # Discord URL
-set(Launcher_DISCORD_URL "https://prismlauncher.org/discord" CACHE STRING "URL for the Discord guild.")
+set(Launcher_DISCORD_URL "" CACHE STRING "URL for the Discord guild.")
 
 # Subreddit URL
-set(Launcher_SUBREDDIT_URL "https://prismlauncher.org/reddit" CACHE STRING "URL for the subreddit.")
+set(Launcher_SUBREDDIT_URL "" CACHE STRING "URL for the subreddit.")
 
 # Builds
 set(Launcher_QT_VERSION_MAJOR "6" CACHE STRING "Major Qt version to build against")
@@ -230,7 +230,7 @@ set(Launcher_ENABLE_JAVA_DOWNLOADER_DEFAULT ON)
 # differing Linux/BSD/etc distributions. Downstream packagers should be explicitly opt-ing into this
 # feature if they know it will work with their distribution.
 if(UNIX AND NOT APPLE)
-    set(Launcher_ENABLE_JAVA_DOWNLOADER_DEFAULT OFF)
+    set(Launcher_ENABLE_JAVA_DOWNLOADER_DEFAULT ON)
 endif()
 
 # Java downloader
@@ -263,7 +263,7 @@ set(Launcher_MSA_CLIENT_ID "c36a9fb6-4f2a-41ff-90bd-ae7cc92031eb" CACHE STRING "
 # https://support.curseforge.com/en/support/solutions/articles/9000207405-curse-forge-3rd-party-api-terms-and-conditions
 # NOTE: CurseForge requires you to change this if you make any kind of derivative work.
 # This key was issued specifically for Prism Launcher
-set(Launcher_CURSEFORGE_API_KEY "$2a$10$wuAJuNZuted3NORVmpgUC.m8sI.pv1tOPKZyBgLFGjxFp/br0lZCC" CACHE STRING "API key for the CurseForge platform")
+set(Launcher_CURSEFORGE_API_KEY "" CACHE STRING "API key for the CurseForge platform")
 
 set(Launcher_COMPILER_NAME ${CMAKE_CXX_COMPILER_ID})
 set(Launcher_COMPILER_VERSION ${CMAKE_CXX_COMPILER_VERSION})
@@ -342,7 +342,7 @@ include(ECMQtDeclareLoggingCategory)
 
 ####################################### Program Info #######################################
 
-set(Launcher_APP_BINARY_NAME "prismlauncher" CACHE STRING "Name of the Launcher binary")
+set(Launcher_APP_BINARY_NAME "steellauncher" CACHE STRING "Name of the Launcher binary")
 add_subdirectory(program_info)
 
 ####################################### Install layout #######################################

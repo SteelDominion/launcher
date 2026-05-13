@@ -1,4 +1,4 @@
-name: Fast Build
+name: Simple Build
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

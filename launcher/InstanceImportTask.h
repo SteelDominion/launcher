@@ -53,7 +53,6 @@ class InstanceImportTask : public InstanceTask {
 
    private:
     void processMultiMC();
-    void processTechnic();
     void processFlame();
     void processModrinth();
 
@@ -68,7 +67,6 @@ class InstanceImportTask : public InstanceTask {
     enum class ModpackType {
         Unknown,
         MultiMC,
-        Technic,
         Flame,
         Modrinth,
     } m_modpackType = ModpackType::Unknown;

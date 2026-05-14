@@ -197,7 +197,7 @@ set(Launcher_UPDATER_GITHUB_REPO "https://github.com/SteelDominion/launcher" CAC
 set(Launcher_BUILD_ARTIFACT "" CACHE STRING "Artifact name to help the updater identify valid artifacts.")
 
 # The metadata server
-set(Launcher_META_URL "" CACHE STRING "URL to fetch Launcher's meta files from.")
+set(Launcher_META_URL "https://meta.prismlauncher.org/v1" CACHE STRING "URL to fetch Launcher's meta files from.")
 
 # Imgur API Client ID
 set(Launcher_IMGUR_CLIENT_ID "" CACHE STRING "Client ID you can get from Imgur when you register an application")
@@ -207,7 +207,7 @@ set(Launcher_BUG_TRACKER_URL "" CACHE STRING "URL for the bug tracker.")
 
 # Translations Platform URL
 set(Launcher_TRANSLATIONS_URL "" CACHE STRING "URL for the translations platform.")
-set(Launcher_TRANSLATION_FILES_URL "" CACHE STRING "URL for the translations files.")
+set(Launcher_TRANSLATION_FILES_URL "https://i18n.prismlauncher.org/" CACHE STRING "URL for the translations files.")
 
 # Matrix Space
 set(Launcher_MATRIX_URL "" CACHE STRING "URL to the Matrix Space")
@@ -384,7 +384,7 @@ if(UNIX AND APPLE)
     set(MACOSX_SPARKLE_DIR "${CMAKE_BINARY_DIR}/frameworks/Sparkle")
 
     if(NOT MACOSX_SPARKLE_UPDATE_PUBLIC_KEY STREQUAL "" AND NOT MACOSX_SPARKLE_UPDATE_FEED_URL STREQUAL "")
-        set(Launcher_ENABLE_UPDATER YES)
+        set(Launcher_ENABLE_UPDATER NO)
     endif()
 
     # Add the icon

@@ -48,7 +48,6 @@
 
 #include "modplatform/flame/FlameInstanceCreationTask.h"
 #include "modplatform/modrinth/ModrinthInstanceCreationTask.h"
-#include "modplatform/technic/TechnicPackProcessor.h"
 
 #include "settings/INISettingsObject.h"
 #include "tasks/Task.h"
@@ -132,7 +131,7 @@ void InstanceImportTask::processZipPack()
     // NOTE: Prioritize modpack platforms that aren't searched for recursively.
     // Especially Flame has a very common filename for its manifest, which may appear inside overrides for example
     // https://docs.modrinth.com/docs/modpacks/format_definition/#storage
-    auto detectInstance = [this, &extractDir, &root](MMCZip::ArchiveReader::File* f, bool& stop) {
+    auto detectInstance = [this, &root](MMCZip::ArchiveReader::File* f, bool& stop) {
         if (!isRunning()) {
             stop = true;
             return true;
@@ -142,13 +141,6 @@ void InstanceImportTask::processZipPack()
             // process as Modrinth pack
             qDebug() << "Modrinth:" << true;
             m_modpackType = ModpackType::Modrinth;
-            stop = true;
-        } else if (fileName == "bin/modpack.jar" || fileName == "bin/version.json") {
-            // process as Technic pack
-            qDebug() << "Technic:" << true;
-            extractDir.mkpath("minecraft");
-            extractDir.cd("minecraft");
-            m_modpackType = ModpackType::Technic;
             stop = true;
         } else if (fileName == "manifest.json") {
             qDebug() << "Flame:" << true;
@@ -235,9 +227,6 @@ void InstanceImportTask::extractFinished()
     switch (m_modpackType) {
         case ModpackType::MultiMC:
             processMultiMC();
-            return;
-        case ModpackType::Technic:
-            processTechnic();
             return;
         case ModpackType::Flame:
             processFlame();
@@ -329,14 +318,6 @@ void InstanceImportTask::processFlame()
     m_task.reset(inst_creation_task);
     setAbortable(true);
     m_task->start();
-}
-
-void InstanceImportTask::processTechnic()
-{
-    shared_qobject_ptr<Technic::TechnicPackProcessor> packProcessor{ new Technic::TechnicPackProcessor };
-    connect(packProcessor.get(), &Technic::TechnicPackProcessor::succeeded, this, &InstanceImportTask::emitSucceeded);
-    connect(packProcessor.get(), &Technic::TechnicPackProcessor::failed, this, &InstanceImportTask::emitFailed);
-    packProcessor->run(m_globalSettings, name(), m_instIcon, m_stagingPath);
 }
 
 void InstanceImportTask::processMultiMC()

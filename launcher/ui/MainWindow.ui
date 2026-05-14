@@ -29,7 +29,6 @@
     </property>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="mainToolBar">
    <property name="windowTitle">
     <string>Main Toolbar</string>
@@ -57,33 +56,6 @@
    <addaction name="actionCheckUpdate"/>
    <addaction name="separator"/>
    <addaction name="actionAccountsButton"/>
-  </widget>
-  <widget class="QToolBar" name="newsToolBar">
-   <property name="windowTitle">
-    <string>News Toolbar</string>
-   </property>
-   <property name="allowedAreas">
-    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>16</width>
-     <height>16</height>
-    </size>
-   </property>
-   <property name="toolButtonStyle">
-    <enum>Qt::ToolButtonTextBesideIcon</enum>
-   </property>
-   <property name="floatable">
-    <bool>false</bool>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>BottomToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-   <addaction name="actionMoreNews"/>
   </widget>
   <widget class="WideBar" name="instanceToolBar">
    <property name="windowTitle">
@@ -211,7 +183,6 @@
      <bool>true</bool>
     </property>
     <addaction name="actionClearMetadata"/>
-    <addaction name="actionReportBug"/>
     <addaction name="actionViewLog"/>
     <addaction name="actionAddToPATH"/>
     <addaction name="separator"/>
@@ -219,7 +190,6 @@
     <addaction name="actionDISCORD"/>
     <addaction name="actionREDDIT"/>
     <addaction name="separator"/>
-    <addaction name="actionMoreNews"/>
     <addaction name="actionCheckUpdate"/>
     <addaction name="actionOpenWiki"/>
     <addaction name="actionAbout"/>
@@ -231,36 +201,6 @@
    <addaction name="accountsMenu"/>
    <addaction name="helpMenu"/>
   </widget>
-  <action name="actionMoreNews">
-   <property name="icon">
-    <iconset theme="news">
-     <normaloff>.</normaloff>.</iconset>
-   </property>
-   <property name="text">
-    <string>More News...</string>
-   </property>
-   <property name="toolTip">
-    <string>Open the development blog to read more news about %1.</string>
-   </property>
-  </action>
-  <action name="action">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="cat">
-     <normaloff>.</normaloff>.</iconset>
-   </property>
-   <property name="text">
-    <string>&amp;Meow</string>
-   </property>
-   <property name="toolTip">
-    <string>It's a fluffy kitty :3</string>
-   </property>
-  </action>
   <action name="actionToggleStatusBar">
    <property name="checkable">
     <bool>true</bool>
@@ -622,28 +562,19 @@
     <string>Themes</string>
    </property>
   </action>
-  <action name="actionReportBug">
-   <property name="icon">
-    <iconset theme="bug">
-     <normaloff>.</normaloff>.</iconset>
-   </property>
-   <property name="text">
-    <string>Report a Bug or Suggest a Feature</string>
-   </property>
-   <property name="toolTip">
-    <string>Open the bug tracker to report a bug with %1.</string>
-   </property>
-  </action>
   <action name="actionDISCORD">
    <property name="icon">
     <iconset theme="discord">
      <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
-    <string>&amp;Discord Guild</string>
+    <string>&amp;Discord Server</string>
+   </property>
+   <property name="iconText">
+    <string>Discord Server</string>
    </property>
    <property name="toolTip">
-    <string>Open %1 Discord guild.</string>
+    <string>Open %1 Discord server.</string>
    </property>
   </action>
   <action name="actionMATRIX">

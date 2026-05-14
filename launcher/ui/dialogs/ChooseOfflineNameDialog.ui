@@ -36,6 +36,9 @@
    </item>
    <item>
     <widget class="QCheckBox" name="allowInvalidUsernames">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="toolTip">
       <string>A username is valid only if it is from 3 to 16 characters in length, uses English letters, numbers, and underscores. An invalid username may prevent joining servers and singleplayer worlds.</string>
      </property>

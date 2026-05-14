@@ -79,5 +79,5 @@ class ThemeManager {
     NSObject* m_windowTitlebarObserver = nullptr;
 #endif
 
-    const QStringList builtinIcons{"flat",    "flat_white"};
+    const QStringList builtinIcons{"flat","flat_white"};
 };

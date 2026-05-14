@@ -11,20 +11,6 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="0">
-    <widget class="QLineEdit" name="modpackEdit">
-     <property name="placeholderText">
-      <string notr="true">http://</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="1">
-    <widget class="QPushButton" name="modpackBtn">
-     <property name="text">
-      <string>Browse</string>
-     </property>
-    </widget>
-   </item>
    <item row="3" column="0" rowspan="2" colspan="2">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
@@ -38,9 +24,19 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>- CurseForge modpacks (ZIP / curseforge:// URL)</string>
+        <string>- Steel Dominion official instances (ZIP)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>- Prism Launcher, PolyMC or MultiMC exported instances (ZIP)</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -58,19 +54,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="label_5">
        <property name="text">
-        <string>- Prism Launcher, PolyMC or MultiMC exported instances (ZIP)</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>- Technic modpacks (ZIP)</string>
+        <string>- CurseForge modpacks (ZIP / curseforge:// URL)</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -78,6 +64,13 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="modpackLabel">
+     <property name="text">
+      <string>Local file or link to a direct download:</string>
+     </property>
+    </widget>
    </item>
    <item row="5" column="0" colspan="2">
     <spacer name="verticalSpacer">
@@ -92,10 +85,17 @@
      </property>
     </spacer>
    </item>
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="modpackLabel">
+   <item row="2" column="0">
+    <widget class="QLineEdit" name="modpackEdit">
+     <property name="placeholderText">
+      <string notr="true">http://</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="modpackBtn">
      <property name="text">
-      <string>Local file or link to a direct download:</string>
+      <string>Browse</string>
      </property>
     </widget>
    </item>

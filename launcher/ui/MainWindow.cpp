@@ -1644,7 +1644,7 @@ void MainWindow::selectionBad()
     setInstanceActionsEnabled(false);
     updateLaunchButton();
     renameButton->setText(tr("Rename Instance"));
-    updateInstanceToolIcon("grass");
+    updateInstanceToolIcon("steeldominion");
 
     // ...and then see if we can enable the previously selected instance
     setSelectedInstanceById(APPLICATION->settings()->get("SelectedInstance").toString());

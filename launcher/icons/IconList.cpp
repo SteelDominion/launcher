@@ -456,7 +456,7 @@ QIcon IconList::getIcon(const QString& key) const
         return m_icons[iconIndex].icon();
 
     // Fallback for icons that don't exist.b
-    iconIndex = getIconIndex("grass");
+    iconIndex = getIconIndex("steeldominion");
 
     if (iconIndex != -1)
         return m_icons[iconIndex].icon();
@@ -465,7 +465,7 @@ QIcon IconList::getIcon(const QString& key) const
 
 int IconList::getIconIndex(const QString& key) const
 {
-    auto iter = m_nameIndex.find(key == "default" ? "grass" : key);
+    auto iter = m_nameIndex.find(key == "default" ? "steeldominion" : key);
     if (iter != m_nameIndex.end())
         return *iter;
 

@@ -128,6 +128,13 @@ NewInstanceDialog::NewInstanceDialog(const QString& initialGroup,
         importPage->setExtraInfo(extra_info);
     }
 
+    if (url.isEmpty()) {
+        // QUrl actualUrl(url);
+        m_container->selectPage("import");
+        importPage->setUrl("https://steeldominion.net");
+        // importPage->setExtraInfo(extra_info);
+    }
+
     updateDialogState();
 
     if (APPLICATION->settings()->get("NewInstanceGeometry").isValid()) {

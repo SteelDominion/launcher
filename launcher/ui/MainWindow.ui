@@ -409,11 +409,11 @@
   </action>
   <action name="actionExportInstanceZip">
    <property name="icon">
-    <iconset theme="launcher">
+    <iconset theme="steeldominion">
      <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
-    <string>Prism Launcher (zip)</string>
+    <string>Steel Launcher (zip)</string>
    </property>
   </action>
   <action name="actionExportInstanceMrPack">

@@ -23,38 +23,38 @@ on:
         description: Type of build (Debug or Release)
         type: string
         default: Debug
-  push:
-    branches:
-      - "develop"
-      - "release-*"
-    tags:
-      - "*"
-    paths:
-      # File types
-      - "**.cpp"
-      - "**.h"
-      - "**.java"
-      - "**.ui"
-      - "**.md"
+  #push:
+  #  branches:
+  #    - "develop"
+  #    - "release-*"
+  #  tags:
+  #    - "*"
+  #  paths:
+  #    # File types
+  #    - "**.cpp"
+  #    - "**.h"
+  #    - "**.java"
+  #    - "**.ui"
+  #    - "**.md"
 
-      # Build files
-      - "**.nix"
-      - "nix/**"
-      - "flake.lock"
+  #    # Build files
+  #    - "**.nix"
+  #    - "nix/**"
+  #    - "flake.lock"
 
-      # Directories
-      - "buildconfig/**"
-      - "cmake/**"
-      - "launcher/**"
-      - "libraries/**"
-      - "program_info/**"
-      - "tests/**"
+  #    # Directories
+  #    - "buildconfig/**"
+  #    - "cmake/**"
+  #    - "launcher/**"
+  #    - "libraries/**"
+  #    - "program_info/**"
+  #    - "tests/**"
 
-      # Files
-      - "CMakeLists.txt"
+  #    # Files
+  #    - "CMakeLists.txt"
 
-      # Workflows
-      - ".github/workflows/nix.yml"
+  #    # Workflows
+  #    - ".github/workflows/nix.yml"
 
 permissions: {}
 

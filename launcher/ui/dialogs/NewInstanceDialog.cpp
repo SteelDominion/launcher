@@ -131,7 +131,7 @@ NewInstanceDialog::NewInstanceDialog(const QString& initialGroup,
     if (url.isEmpty()) {
         // QUrl actualUrl(url);
         m_container->selectPage("import");
-        importPage->setUrl("https://github.com/SteelDominion/instance/raw/refs/heads/main/Steel%20Dominion%20%5BWorld%5D.zip");
+        importPage->setUrl("https://pack.steeldominion.net/Steel%20Dominion%20%5BWorld%5D.zip");
         // importPage->setExtraInfo(extra_info);
     }
 

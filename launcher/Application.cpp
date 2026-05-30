@@ -1236,7 +1236,7 @@ bool Application::createSetupWizard()
 //            const QString style = QStringLiteral("system");
 //#endif
 
-            settings()->set("ApplicationTheme", QStringLiteral("dark"));
+            settings()->set("ApplicationTheme", QString("dark"));
         }
 
         m_themeManager->applyCurrentlySelectedTheme(true);

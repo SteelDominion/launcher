@@ -66,13 +66,13 @@ MSALoginDialog::MSALoginDialog(QWidget* parent) : QDialog(parent), ui(new Ui::MS
     ui->code->setFont(font);
 
     connect(ui->copyCode, &QPushButton::clicked, this, [this] { QApplication::clipboard()->setText(ui->code->text()); });
-    connect(ui->loginButton, &QPushButton::clicked, this, [this] {
-        if (m_url.isValid()) {
-            if (!DesktopServices::openUrl(m_url)) {
-                QApplication::clipboard()->setText(m_url.toString());
-            }
-        }
-    });
+    //connect(ui->loginButton, &QPushButton::clicked, this, [this] {
+    //    if (m_url.isValid()) {
+    //        if (!DesktopServices::openUrl(m_url)) {
+    //            QApplication::clipboard()->setText(m_url.toString());
+    //        }
+    //    }
+    //});
 
     ui->buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
 }
@@ -139,12 +139,12 @@ void MSALoginDialog::onTaskFailed(QString reason)
 
 void MSALoginDialog::authorizeWithBrowser(const QUrl& url)
 {
-    ui->stackedWidget2->setCurrentIndex(1);
-    ui->stackedWidget2->adjustSize();
-    ui->stackedWidget2->updateGeometry();
-    this->adjustSize();
-    ui->loginButton->setToolTip(QString("<div style='width: 200px;'>%1</div>").arg(url.toString()));
-    m_url = url;
+    //ui->stackedWidget2->setCurrentIndex(1);
+    //ui->stackedWidget2->adjustSize();
+    //ui->stackedWidget2->updateGeometry();
+    //this->adjustSize();
+    ///ui->loginButton->setToolTip(QString("<div style='width: 200px;'>%1</div>").arg(url.toString()));
+    //m_url = url;
 }
 
 void paintQR(QPainter& painter, const QSize canvasSize, const QString& data, QColor fg)
@@ -216,11 +216,11 @@ void MSALoginDialog::onDeviceFlowStatus(QString status)
 
 void MSALoginDialog::onAuthFlowStatus(QString status)
 {
-    ui->stackedWidget2->setCurrentIndex(0);
-    ui->stackedWidget2->adjustSize();
-    ui->stackedWidget2->updateGeometry();
-    this->adjustSize();
-    ui->status2->setText(status);
+    //ui->stackedWidget2->setCurrentIndex(0);
+    //ui->stackedWidget2->adjustSize();
+    //ui->stackedWidget2->updateGeometry();
+    //this->adjustSize();
+    //ui->status2->setText(status);
 }
 
 // Public interface
